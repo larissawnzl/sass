@@ -1,0 +1,76 @@
+@import "reset";
+
+$base-size: 300px;
+$base-color: #0F9988;
+$base-font: "Open Sans", sans-serif;
+
+@mixin scale($factor) {
+  width: $base-size*$factor;
+  height: $base-size*$factor;
+}
+
+body{
+  @extend %flexbox;
+  height: 100vh;
+  color: #FFF;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+%flexbox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+%color-card{
+  @extend %flexbox;
+  width: $base-size;
+  height: $base-size;
+  background: $base-color;
+  font-family: $base-font;
+}
+
+.lighter{
+  @extend %color-card;
+  @include scale(0.8);
+  background: lighten($base-color, 10%);
+  &:after{
+    content: " ("+lighten($base-color, 10%)+")";
+  }
+}
+
+.light{
+  @extend %color-card;
+  @include scale(0.9);
+  background: lighten($base-color, 5%);
+  &:after{
+    content: " ("+lighten($base-color, 5%)+")";
+  }
+}
+
+.base{
+  @extend %color-card;
+  &:after{
+    content: " ("+$base-color+")";
+  }
+}
+
+.dark{
+  @extend %color-card;
+  @include scale(0.9);
+  background: darken($base-color, 5%);
+  &:after{
+    content: " ("+darken($base-color, 5%)+")";
+  }
+}
+
+.darker{
+  @extend %color-card;
+  @include scale(0.8);
+  background: darken($base-color, 10%);
+  &:after{
+    content: " ("+darken($base-color, 10%)+")";
+  }
+}

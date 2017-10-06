@@ -1,0 +1,57 @@
+html, body {
+  margin: 0;
+  padding: 0; }
+
+*:after, *:before {
+  white-space: pre; }
+
+body {
+  height: 100vh;
+  color: #FFF;
+  text-transform: uppercase;
+  text-align: center; }
+
+body, .lighter, .light, .base, .dark, .darker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center; }
+
+.lighter, .light, .base, .dark, .darker {
+  width: 300px;
+  height: 300px;
+  background: #0F9988;
+  font-family: "Open Sans", sans-serif; }
+
+.lighter {
+  width: 240px;
+  height: 240px;
+  background: #14c7b1; }
+  .lighter:after {
+    content: " (#14c7b1)"; }
+
+.light {
+  width: 270px;
+  height: 270px;
+  background: #11b09d; }
+  .light:after {
+    content: " (#11b09d)"; }
+
+.base:after {
+  content: " (#0F9988)"; }
+
+.dark {
+  width: 270px;
+  height: 270px;
+  background: #0d8273; }
+  .dark:after {
+    content: " (#0d8273)"; }
+
+.darker {
+  width: 240px;
+  height: 240px;
+  background: #0a6b5f; }
+  .darker:after {
+    content: " (#0a6b5f)"; }
+
+/*# sourceMappingURL=style.css.map */
